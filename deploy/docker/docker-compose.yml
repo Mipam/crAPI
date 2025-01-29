@@ -154,7 +154,7 @@ services:
     container_name: crapi-web
     image: crapi/crapi-web:${VERSION:-latest}
     ports:
-      - "${LISTEN_IP:-0.0.0.0}:8888:80"
+      - "${LISTEN_IP:-20.215.232.47}:8888:80"
       - "${LISTEN_IP:-0.0.0.0}:30080:80"
       - "${LISTEN_IP:-0.0.0.0}:8443:443"
       - "${LISTEN_IP:-0.0.0.0}:30443:443"
@@ -236,7 +236,7 @@ services:
       MH_STORAGE: mongodb
     ports:
       #  - "127.0.0.1:1025:1025" # smtp server
-      - "${LISTEN_IP:-0.0.0.0}:8025:8025" # Mail ui
+      - "${LISTEN_IP:-20.215.232.47}:8025:8025" # Mail ui
     healthcheck:
       test: [ "CMD", "nc", "-z", "localhost", "8025" ]
       interval: 15s
